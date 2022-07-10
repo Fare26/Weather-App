@@ -1,0 +1,400 @@
+body {
+  /* background: linear-gradient(to right, #664d034c, #664d034c),
+    url(../imgs/1.jpg);
+  background-position: bottom; */
+  background: rgb(133, 166, 225);
+  background: linear-gradient(
+    180deg,
+    rgba(133, 166, 225, 1) 0%,
+    rgba(121, 178, 245, 1) 50%,
+    rgba(95, 150, 207, 1) 100%
+  );
+  font-family: "Oswold", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px 30px;
+}
+
+#container {
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* ---------------SEARCH---------------------- */
+.box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  display: flex;
+  cursor: pointer;
+  padding: 7px 10px;
+  background-color: #fff;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.5);
+}
+
+.box input {
+  outline: none;
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+  width: 100%;
+  font-size: 16px;
+  color: #888;
+}
+
+.box input::placeholder {
+  color: #aaa;
+}
+
+.box a i {
+  color: #888;
+  font-size: 18px;
+}
+
+/* -------------TIME------------------- */
+#current-time {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+/* -------------CITY------------------- */
+#city-container {
+  margin-top: 2rem;
+}
+
+#current-city,
+#current-city span {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+#current-city {
+  font-weight: 400;
+}
+
+/* -------------current weather------------------- */
+#current-weather--conatiner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#weather-info--1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weather-info--1 img {
+  width: 220px;
+  height: 220px;
+}
+
+#current-temperature #temp {
+  margin: 0;
+  font-size: 5.5rem;
+  color: #fff;
+}
+
+#current-temperature p {
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+#weather-info--2 {
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.boxes i {
+  font-size: 1.7rem;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.boxes div {
+  text-align: center;
+}
+
+.boxes div p:first-child {
+  color: #fff;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.boxes div p:first-child span {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.boxes div p:last-child {
+  color: #fff;
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+#wind span:first-child,
+#humidity span:first-child {
+  color: #fff;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* -------------forecast weather hourly------------------- */
+
+#forecast-title {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.forecast-box {
+  width: 115px;
+  padding: 10px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.forecast-box p {
+  margin: 0.5rem 0 0 0;
+}
+
+.forecast-box img {
+  height: 50px;
+  width: 50px;
+}
+
+.forecast-box div,
+.daily-box div {
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.forecast-box div span:first-child,
+.daily-box div span:first-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.daily-box div span:last-child {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+hr {
+  border: 1px solid #fff;
+  outline: none;
+}
+
+/* -------------forecast weather daily------------------- */
+
+.daily-box {
+  width: 160px;
+  padding: 10px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.daily-box p:first-child {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* ---------------LOADER---------------- */
+#loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.krug {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: linear-gradient(#dc3545a6, #fff);
+  animation: animacija 1s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animacija {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.krug-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(#ea868f, #fff);
+  filter: blur(35px);
+}
+
+.puls {
+  position: relative;
+  border-radius: 50%;
+  background-color: #050210;
+  opacity: 0.7;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.puls::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff40;
+  animation: blinking 1s linear infinite;
+}
+
+@keyframes blinking {
+  from {
+    transform: scale(0.8, 0.8);
+  }
+  to {
+    transform: scale(10, 10);
+  }
+}
+
+/* --------------SWIPER STYLE------------------------- */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.hourly1 {
+  width: 150px !important;
+}
+
+.daily1 {
+  width: 195px !important;
+}
+
+/* -----------RESPONSIVE---------------------- */
+
+@media only screen and (min-width: 1450px) {
+  .daily {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .box {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #current-weather--conatiner {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+  #city-container {
+    text-align: center;
+  }
+  #time-container {
+    text-align: center;
+  }
+  .box {
+    width: 60%;
+  }
+  body {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #current-weather--conatiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  #weather-info--1 img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #current-temperature #temp {
+    font-size: 4rem;
+  }
+
+  #weather-info--2 {
+    flex-direction: column;
+    width: 100%;
+  }
+}
