@@ -3,7 +3,7 @@ function renderWeather(currently, forecast) {
   forecastDailyContainer.innerHTML = "";
   currentCity.innerHTML = currently.name;
   currentCountry.innerHTML = currently.country;
-  let mainTime = new Intl.DateTimeFormat(lang, {
+  let mainTime = new Intl.DateTimeFormat("en-US", {
     weekday: "long",
     day: "numeric",
     month: "long",

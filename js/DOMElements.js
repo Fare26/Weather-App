@@ -1,5 +1,5 @@
 let isLocation = false;
-let lang = navigator.language;
+let lang = "en-US";
 let searchCity = document.querySelector("#search");
 let find = document.querySelector("#find");
 let currentCity = document.querySelector("#current-city span:first-child");
